@@ -81,7 +81,125 @@ h6 {
   --accent-blue: hsl(223, 100%, 88%);
   --accent-red: hsl(354, 100%, 66%);
   --neutral-grey: hsl(0, 0%, 59%);
-  --neutal-dark-blue: hsl(209, 33%, 12%);
+  --neutral-dark-blue: hsl(209, 33%, 12%);
   --font-size: 20px;
   --main-font: "Libre Franklin", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--main-font);
+  margin-inline: auto;
+  min-width: 26rem;
+  max-width: 26rem;
+}
+@media (min-width: 1000px) {
+  body {
+    max-width: 40rem;
+  }
+}
+
+.logo img {
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
+main {
+  text-align: center;
+  margin: 3rem 1rem 5rem 1rem;
+}
+main .heading {
+  color: var(--neutral-grey);
+  font-weight: 300;
+}
+main .heading span {
+  font-weight: 700;
+  color: var(--neutral-dark-blue);
+}
+main p {
+  margin-top: 1rem;
+  color: var(--neutral-dark-blue);
+}
+@media (min-width: 1000px) {
+  main p {
+    margin-top: 0;
+  }
+}
+main form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main form input::-moz-placeholder {
+  color: var(--accent-blue);
+}
+main form input::placeholder {
+  color: var(--accent-blue);
+}
+main form input,
+main form button {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 2rem;
+  border: 1px solid var(--accent-blue);
+}
+main form button {
+  flex-basis: 40%;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+@media (min-width: 1000px) {
+  main form {
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+main img {
+  margin-top: 5rem;
+}
+@media (min-width: 1000px) {
+  main img {
+    margin-top: 3rem;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  text-align: center;
+  padding: 2rem;
+  position: sticky;
+}
+footer .socials-list {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+footer .socials-list li {
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--accent-blue);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+footer .socials-list .fa-brand {
+  color: var(--primary);
+}
+footer .copyright-text {
+  font-size: 1rem;
+  color: var(--neutral-grey);
 }
