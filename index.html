@@ -31,8 +31,16 @@
       <h1 class="heading">We are launching <span>soon!</span></h1>
       <p>Subscribe and get notified</p>
       <form>
-        <input type="email" placeholder="Your email address.." />
-        <button type="button">Notify Me</button>
+        <div class="email-input">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Your email address.."
+          />
+          <span id="error-message">Please provide a valid email address</span>
+        </div>
+        <button id="notify-me-button" type="button">Notify Me</button>
       </form>
       <img src="./images/illustration-dashboard.png" alt="dashboard" />
     </main>
